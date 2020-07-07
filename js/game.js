@@ -22,6 +22,7 @@ let perguntas = [
     }
 ];
 
+
 console.log('Carreguei');
 
 
@@ -55,32 +56,23 @@ let alternativaSelecionada = "";
 for (let i = 0; i < alternativas.length; i++) {
     console.log(alternativas[i].id);
     alternativas[i].addEventListener("click", evt => {
+        // Se alternativa estiver vazia
         if (alternativaSelecionada === evt.target) return
-        if (alternativaSelecionada === "") {
-            alternativaSelecionada = evt.target;
 
-            console.log('Alternativa: ' + evt.target);
-            // let selecionada = document.getElementById(alternativaSelecionada);
-            // console.log(selecionada);
-            alternativaSelecionada.classList.toggle('alternativa');
-            alternativaSelecionada.classList.toggle('selecionada');
-
-            Number(alternativaSelecionada);
-            console.log(alternativaSelecionada);
-        } else {
-            alternativaSelecionada.classList.toggle('alternativa');
-            alternativaSelecionada.classList.toggle('selecionada');
-
-            alternativaSelecionada = evt.target;
-
-            console.log('Alternativa: ' + evt.target);
-            // let selecionada = document.getElementById(alternativaSelecionada);
-            alternativaSelecionada.classList.toggle('alternativa');
-            alternativaSelecionada.classList.toggle('selecionada');
-
-            Number(alternativaSelecionada);
-            console.log(alternativaSelecionada);
+        if (alternativaSelecionada !== "") {
+            // Alterando anterior
+            alterarEstilo();
         }
+
+        alternativaSelecionada = evt.target;
+
+        console.log('Alternativa: ' + evt.target);
+        // Alterando atual
+        alterarEstilo();
+
+        Number(alternativaSelecionada);
+        console.log(alternativaSelecionada);
+
     });
 }
 
@@ -161,6 +153,11 @@ function finalizar() {
     telaQuiz.classList.remove('ativo');
     telaQuiz.classList.add('inativo');
     telaFinal.classList.add('ativo');
+}
+
+function alterarEstilo() {
+    alternativaSelecionada.classList.toggle('alternativa');
+    alternativaSelecionada.classList.toggle('selecionada');
 }
 
 iniciar();
