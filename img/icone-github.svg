@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_61" data-name="Rectangle 61" width="40" height="40" transform="translate(1130 20)" fill="#484b4d"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_3" data-name="Rectangle 3" width="40" height="40" transform="translate(1130 100)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="icone-github" transform="translate(-1130 -20)" clip-path="url(#clip-path)">
+    <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(0 -80)" clip-path="url(#clip-path-2)">
+      <path id="midia-social" d="M20,.833A19.827,19.827,0,0,0,0,20.487,19.686,19.686,0,0,0,13.675,39.133c1,.185,1.367-.423,1.367-.945,0-.467-.017-1.7-.025-3.342C9.453,36.032,8.28,32.21,8.28,32.21a5.239,5.239,0,0,0-2.225-2.875c-1.812-1.218.14-1.193.14-1.193a4.184,4.184,0,0,1,3.063,2.025c1.783,3,4.682,2.137,5.825,1.635a4.161,4.161,0,0,1,1.267-2.628c-4.442-.492-9.11-2.182-9.11-9.712A7.509,7.509,0,0,1,9.3,14.188a6.876,6.876,0,0,1,.175-5.2s1.675-.527,5.5,2.015a19.176,19.176,0,0,1,10,0c3.8-2.542,5.475-2.015,5.475-2.015a7.066,7.066,0,0,1,.2,5.2,7.539,7.539,0,0,1,2.05,5.273c0,7.55-4.675,9.212-9.125,9.695a4.663,4.663,0,0,1,1.35,3.637c0,2.63-.025,4.743-.025,5.382,0,.515.35,1.13,1.375.933A19.626,19.626,0,0,0,40,20.487,19.83,19.83,0,0,0,20,.833Z" transform="translate(1130 100)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Show do Milhão - Jovens Gênios</title>
+
+    <meta name="description"
+          content="Aplicação desenvolvida para o processo seletivo Jovens Gênios - Vitor Bragança">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:title" content="Show do Milhão - Jovens Gênios"/>
+    <meta property="og:site_name" content="Show do Milhão">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Aplicação desenvolvida para o processo seletivo Jovens Gênios - Vitor Bragança">
+    <meta property="og:url" content=""/>
+    <meta property="og:image"
+          content=""/>
+
+
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/grid.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="">
+
+    <!-- Script -->
+    <script>document.documentElement.classList.add("js");</script>
+
+
+</head>
+<body>
+
+<!-- Header Section -->
+    <header class="header">
+        <div class="container">
+
+            <a class="grid-4 header_logo" href="#">
+                <img src="./img/logo-jogo.svg" alt="Show do Milhão">
+            </a>
+
+            <div id="header_vitor">
+                <a href="https://vitorbraganca.com" target="_blank">
+                    <img src="./img/vitor-elipse.png" alt="Vitor Braganca">
+                </a>
+                <p>Por Vítor</p>
+
+            </div>
+
+            <nav class="header_menu">
+                <ul class="grid-16">
+                    <li><a href="#jogo-inicial">Jogar</a></li>
+                    <li><a href="./ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
+
+            <ul class="header_redes grid-1">
+                <li><a href="#"><img src="./img/icone-github.svg" alt="GitHub"></a></li>
+                <li><a href="#"><img src="./img/icone-linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="./img/icone-vitor.svg" alt="Vitor Braganca"></a></li>
+            </ul>
+
+        </div>
+    </header>
+<!-- Header Section End -->
+
+<!-- Introducao Section -->
+<section class="introducao">
+    <div class="container">
+
+
+        <h1>Show do Milhão da Família Aguiar</h1>
+
+        <div id="intro-subtitulo">
+            <h2>Desafio de Desenvolvimento</h2>
+            <h2>Processo Seletivo Jovens Gênios</h2>
+        </div>
+
+
+
+        <a id="intro-btn" href="#jogo-inicial" class="btn">Jogue agora!</a>
+
+
+    </div>
+</section>
+<!-- Introducao Section End -->
+
+<!-- Jogo Section -->
+<section class="jogo-inicial" id="jogo-inicial">
+
+    <div class="container">
+
+        <a id="ajuda-btn" href="./ajuda.html" class="btn">Ajuda?</a>
+
+        <div class="jogo-tela" id="tela-inicial">
+            <img class="jogo-logo-inicial" src="./img/logo-jogo.svg" alt="Logo">
+            <h3>Bem vindo ao Show do Milhão da Família Aguiar</h3>
+
+            <p>Está pronto?</p>
+            <a id="pronto-btn" href="#" class="btn">Jogue agora!</a>
+
+        </div>
+
+        <div class="jogo-tela inativo" id="tela-quiz">
+
+            <div class="barra-lateral-quiz">
+                <ul class="lista-pontos">
+                    <li id="premio-7">R$1.000.000,00</li>
+                    <li id="premio-6">R$500.000,00</li>
+                    <li id="premio-5">R$100.000,00</li>
+                    <li id="premio-4">R$50.000,00</li>
+                    <li id="premio-3">R$25.000,00</li>
+                    <li id="premio-2">R$5.000,00</li>
+                    <li id="premio-1">R$1.000,00</li>
+                </ul>
+            </div>
+
+            <div class="barra-lateral-quiz" id="barra-info">
+                <ul class="lista-info">
+                    <li id="dificuldade-item">
+                        <h4>Dificuldade: </h4>
+                        <p id="dificuldade">Fácil</p>
+                    </li>
+
+                    <li id="atual-item">
+                       <h4>Prêmio atual</h4>
+                        <p id="premio-atual">R$0,00</p>
+                    </li>
+
+                    <li id="derrota-item">
+                        <h4>Se perder...</h4>
+                        <p id="premio-derrota">R$0,00</p>
+                    </li>
+
+                    <li id="proximo-item">
+                        <h4>Próximo</h4>
+                        <p id="premio-proximo">R$0,00</p>
+                    </li>
+                    
+                    <li id="desistir-item">
+                        <h4 id="desistir">DESISTIR</h4>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="perguntas" id="perguntas">
+
+                <h3 id="pergunta-numero">Pergunta 1:</h3>
+
+                <h4 id="pergunta">Qual é a capital do Brasil?</h4>
+
+                <table class="lista-alternativas" id="alternativas">
+                    <tr>
+                        <td class="alternativa" id="0">A) Rio de Janeiro</td>
+                        <td class="alternativa" id="1">C) São Paulo</td>
+                    </tr>
+                    <tr>
+                        <td class="alternativa"  id="2">B) Bahia</td>
+                        <td class="alternativa"  id="3">D) Brasília</td>
+                    </tr>
+                </table>
+
+                <h4 id="resultado" class="inativo">Você acertou!</h4>
+
+                <input type="submit" id="btn-verifica" class="btn" value="Estou certo disso" onclick="verifica()">
+
+            </div>
+
+
+        </div>
+
+        <div class="jogo-tela inativo" id="tela-final">
+            <img class="jogo-logo-inicial" src="./img/logo-jogo.svg" alt="Logo">
+            <h3>O jogo acabou agora!</h3>
+
+<!--            <p>Está pronto?</p>-->
+            <a id="novamente-btn" href="#" class="btn">Jogue agora!</a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Jogo Section End -->
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer">
+        <div class="container">
+            <div class="grid-8 footer_historia">
+                <h3>Nossa historia</h3>
+                <p>Este projeto não tem nenhuma intenção de tornar-se lucrativo de alguma forma. Tem como intenção apenas ser concluído para a etapa do Processo Seletivo Jovens Gênios.
+                    <br>Desenvolvido por Vítor Eduardo Bragança.</p>
+            </div>
+
+            <div class="grid-4 footer_contato">
+                <h3>Contato</h3>
+                <ul>
+                    <li>(21) 98289-4237</li>
+                    <li>Rio de Janeiro - RJ</li>
+                    <li>vitorbraganca@outlook.com</li>
+                </ul>
+            </div>
+
+            <div class="grid-4 footer_redes">
+                <h3>Encontre-me</h3>
+                <ul>
+                    <li><a href="#" target="_blank">
+                        <img src="img/icone-github.svg" alt="GitHub"></a></li>
+                    <li><a href="#" target="_blank">
+                        <img src="img/icone-linkedin.svg" alt="LinkedIn"></a></li>
+                    <li><a href="#" target="_blank">
+                        <img src="img/icone-vitor.svg" alt="Vitor Braganca"></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="copy">
+        <div class="container">
+            <div class="grid-7">
+                <p>Vítor Bragança 2020 - Nenhum direito reservado.</p>
+            </div>
+            <div class="grid-8">
+                <nav class="footer_menu">
+                    <ul>
+                        <!--                             MUDAR CAMINHO PARA PAGINAS DEFINITIVAS-->
+                        <li><a href="#jogo-inicial">Jogar</a></li>
+                        <li><a href="./ajuda.html">Ajuda</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- Footer Section End -->
+
+<script src="./js/game.js"></script>
+
+</body>

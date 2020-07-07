@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_62" data-name="Rectangle 62" width="40" height="40" transform="translate(1130 140)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="icone-vitor" transform="translate(-1130 -140)" clip-path="url(#clip-path)">
+    <g id="Favicon" transform="translate(977.093 99.269)">
+      <text id="V" transform="translate(153.514 70.731)" fill="#fff" font-size="28" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800"><tspan x="0" y="0">V</tspan></text>
+      <text id="B_" data-name="B " transform="translate(171.301 70.731)" fill="#fff" font-size="28" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800"><tspan x="0" y="0">B</tspan></text>
+    </g>
+  </g>
+</svg>

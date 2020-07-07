@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_60" data-name="Rectangle 60" width="40" height="40" transform="translate(1130 80)" fill="#484b4d"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="40" height="40" transform="translate(1070 100)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="icone-linkedin" transform="translate(-1130 -80)" clip-path="url(#clip-path)">
+    <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(60 -20)" clip-path="url(#clip-path-2)">
+      <path id="icon_1_" data-name="icon (1)" d="M12.5,33.047H7.032V15.391H12.5Zm.546-23.282a3.2,3.2,0,1,0-3.2,3.2,3.2,3.2,0,0,0,3.2-3.2ZM32.969,23.333c0-4.74-1-8.255-6.538-8.255a5.675,5.675,0,0,0-5.175,2.714H21.25v-2.4H15.938V33.047H21.25V24.28c0-2.3.584-4.52,3.43-4.52,2.807,0,2.9,2.625,2.9,4.666v8.621h5.391ZM40,35.313V4.688A4.693,4.693,0,0,0,35.313,0H4.688A4.693,4.693,0,0,0,0,4.688V35.313A4.693,4.693,0,0,0,4.688,40H35.313A4.693,4.693,0,0,0,40,35.313ZM35.313,3.125a1.564,1.564,0,0,1,1.563,1.563V35.313a1.564,1.564,0,0,1-1.562,1.563H4.688a1.564,1.564,0,0,1-1.562-1.562V4.688A1.564,1.564,0,0,1,4.688,3.125Zm0,0" transform="translate(1070 100)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Show do Milhão - Jovens Gênios</title>
+
+    <meta name="description"
+          content="Aplicação desenvolvida para o processo seletivo Jovens Gênios - Vitor Bragança">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:title" content="Show do Milhão - Jovens Gênios"/>
+    <meta property="og:site_name" content="Show do Milhão">
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Aplicação desenvolvida para o processo seletivo Jovens Gênios - Vitor Bragança">
+    <meta property="og:url" content=""/>
+    <meta property="og:image"
+          content=""/>
+
+
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/grid.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="">
+
+    <!-- Script -->
+    <script>document.documentElement.classList.add("js");</script>
+
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+
+            <a class="grid-4 header_logo" href="#">
+                <img src="./img/logo-jogo.svg" alt="Show do Milhão">
+            </a>
+
+            <div id="header_vitor">
+                <a href="https://vitorbraganca.com" target="_blank">
+                    <img src="./img/vitor-elipse.png" alt="Vitor Braganca">
+                </a>
+                <p>Por Vítor</p>
+
+            </div>
+
+            <nav class="header_menu">
+                <ul class="grid-16">
+                    <li><a href="./index.html">Jogar</a></li>
+                    <li><a href="./ajuda.html">Ajuda</a></li>
+                </ul>
+            </nav>
+
+            <ul class="header_redes grid-1">
+                <li><a href="#"><img src="./img/icone-github.svg" alt="GitHub"></a></li>
+                <li><a href="#"><img src="./img/icone-linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="./img/icone-vitor.svg" alt="Vitor Braganca"></a></li>
+            </ul>
+
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <title>Javascript Quiz - Criado por: ThiagoY.B. (t.co/thiagoyb)</title>
+    <script type="text/javascript" language="javascript">
+        var inicio=confirm('Bem-Vindo ao Quiz em javascript!nVoce tem certeza de que quer participar?');
+        var sair = "<html><head><title>Voce nao quis participar</title></head><body>Obrigado pela sua resposta!<br></body></html>";
+        if(inicio==false){document.write(sair);}
+        else{ window.alert('Começou o game! Clique em Ok abaixo para começar');
+            //Inicio do quiz
+            var certo = "<b>Correto!</b>"; var errado = "<b style='color:red;'>Errado!</b>";var o = new Array();
+            var acertos=0; var erros=0; var respostas = new Array(); var p = new Array();var r = new Array();
+            var t=10; //COLOQUE AQUI TOTAL DE PERGUNTAS DO QUIZ !!!!
+            // LISTA DE PERGUNTAS
+            p[1] = "Quantos animais de cada especie Moisés levou para a arca?";
+            r[1] = '0';
+            p[2] = "Se um triângulo retângulo tem lados 6 e 8, qual é o valor da sua hipotenusa?";
+            r[2] = 10;
+            p[3] = "Em que ano foi iniciada a 1º Guerra Mundial?";
+            r[3] = 1914;
+            p[4] = "Em que ano terminou a 1º Guerra Mundial?";
+            r[4] = 1918;
+            p[5] = "Em que ano foi iniciada a 2º Guerra Mundial?";
+            r[5] = 1939;
+            p[6] = "Em que ano terminou a 2º Guerra Mundial?";
+            r[6] = 1945;
+            p[7] = "Qual e o único numero primo que é par?";
+            r[7] = 2;
+            p[8] = "Qual deve ser a medida do ângulo de um triangulo equilátero?";
+            r[8] = 60;
+            p[9] = "Quantos nomes tinha D. Pedro I?";
+            r[9] = 18;
+            p[10] = "Quantos nomes tinha D. Pedro II?";
+            r[10] = 15;
+            //ADICIONE MAIS PERGUNTAS AQUI COPIANDO 2 EM 2 LINHAS: P[] = PERGUNTA R[] = RESPOSTA
+            for(var i=1;i<=t;i++){o[i] = i;} //gera uma sequencia de t numeros
+            for(var i=1;i<=10;i++)          //embaralha a sequencia 10 vezes
+            {
+                n=Math.round(t*(Math.random()));
+                m=Math.round(t*(Math.random()));
+                if(m==0){m++;}
+                if(n==0){n++;}
+                var temp = o[n];
+                o[n]=o[m];
+                o[m]=temp;
+            }
+            for(var i=1;i<=t;i++)
+            {
+                respostas[o[i]] = prompt(p[o[i]],"");
+                if(respostas[o[i]]==r[o[i]]){respostas[o[i]]=certo;acertos++;}else{respostas[o[i]]=errado;erros++;}
+            }
+            //fim do quiz
+            document.write("Javascript Quiz:<br><br>Suas respostas:<br><br>");
+            document.write("<ol>");
+            for(var i=1;i<=t;i++)
+            {
+                document.write("<li>"+respostas[o[i]]);}
+            document.write("</ol>");
+            document.write("<br>Total de acertos: "+acertos);
+            document.write("<br>Total de erros: "+erros);
+            document.write("<br><br><input type=button value='Respostas' Onclick=javascript:if(document.getElementById('rp').style.display=='none'){document.getElementById('rp').style.display='block';}else{document.getElementById('rp').style.display='none';}>");
+            document.write("<br><div id='rp' class='rp' style='display:none;'><ol>");
+            for(var i=1;i<=t;i++)
+            { document.write("<li>"+p[o[i]]+"<br>R:"+r[o[i]]);}
+            document.write("</ol></div>");
+        }
+    </script>
+
+</body>

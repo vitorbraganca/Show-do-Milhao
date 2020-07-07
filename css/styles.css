@@ -1,0 +1,594 @@
+/* ESTILOS GERAIS */
+
+
+body {
+    font-family: Montserrat, serif;
+}
+
+p {
+    font-family: Montserrat, serif;
+    font-size: 1rem;
+    line-height: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+.btn {
+    position: relative;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 20px 50px;
+    color: #09090E;
+    font-size: 1.25rem;
+    line-height: 20px;
+    font-weight: 800;
+    transition: 500ms;
+}
+
+.btn:hover {
+    background-color: #6E28BF;
+    color: #fff;
+    font-weight: 800;
+    padding: 10px 40px;
+}
+
+
+/* ESTILO HEADER */
+
+
+.header {
+    height: 20vh;
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: #6E28BF ;
+    padding: 1% 0;
+    z-index: 10;
+    text-align: center;
+}
+
+.header_logo {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+}
+
+.header img {
+    position: relative;
+    /*width: 10vw;*/
+    margin: 0 auto;
+}
+
+.header_menu {
+    text-align: center;
+    margin: 10% auto 0;
+}
+
+.header_menu ul li {
+    display: inline-block;
+    padding-top: 2%;
+    margin-right: 3%;
+}
+
+.header_menu ul li:last-child {
+    margin-right: 0;
+}
+
+.header_menu ul li a {
+    font-family: Montserrat, Arial, sans-serif;
+    color: #FFF;
+    font-weight: 800;
+    text-transform: uppercase;
+    /*font-weight: bold;*/
+    letter-spacing: .1em;
+    font-size: 1.5rem;
+    padding: 10px 0;
+}
+
+.header_menu ul li a:hover {
+    color: #000;
+    transition: 200ms;
+}
+
+.header_redes {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.header_redes li {
+    margin-top: 1%;
+}
+
+#header_vitor {
+    position: absolute;
+    left: 0;
+    top: 20%;
+}
+
+#header_vitor img:hover {
+    width: 95%;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 50px;}
+
+#header_vitor p {
+    color: white;
+    font-weight: 400;
+    margin-top: 3%;
+    font-size: 1.1rem;
+}
+
+.header_redes li img:hover {
+    filter: invert();
+    transition: 500ms;
+
+}
+.header_redes img {
+    margin-top: 35%;
+}
+
+/* ESTILO FOOTER */
+
+
+
+.footer {
+    width: 100%;
+    min-height: 20vh;
+    max-height: 40vh;
+    background-color: #2F4FD8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 0;
+    font-weight: 700;
+    z-index: 10;
+}
+
+.footer h3 {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.footer h3:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #10184C;
+    margin: 6px 0 12px 0;
+}
+.footer_historia {
+    padding-right: 40px;
+    text-align: justify;
+}
+
+.footer_contato {
+    margin-left: 10px;;
+    font-size: 1.125rem;
+    line-height: 25px;
+}
+
+.footer_contato li {
+    margin-top: 10px;
+
+}
+
+.footer_redes ul {
+    margin-top: 20px;
+}
+
+.footer_redes ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.footer_redes ul li a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 9px;
+    background-color: #10184C;
+    display: block;
+    padding: 10px;
+}
+
+.footer_redes ul li a:hover {
+    border-color: #000;
+    background-color: #817BE6;
+}
+
+.footer_redes ul li a img {
+    margin: 0 auto;
+    height: 20px;
+}
+
+.copy {
+    color: white;
+    width: 100%;
+    background: #10184C;
+    padding: 20px 0;
+
+}
+
+.footer_menu {
+    text-align: right;
+}
+
+.footer_menu ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.footer_menu ul li a {
+    color: white;
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 20px;
+    padding: 10px 0;
+}
+
+.footer_menu ul li a:hover {
+    color: #FCC8C1;
+    font-weight: 700;
+}
+
+#footer-btn {
+    background-color: #817BE6;
+    padding: 5% 10px;
+    border-radius: 15px;
+    color: white;
+    transition: 500ms;
+}
+
+#footer-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* ESTILO INTRODUCAO */
+
+.introducao {
+    /*margin-top: 20vh;*/
+    background-color: #817BE6;
+    height: 80vh;
+    padding: 2% 0;
+}
+
+.introducao h1 {
+    font-size: 2.25rem;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+}
+
+#intro-subtitulo {
+    font-size: 1.75rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#intro-subtitulo:after, #intro-subtitulo:before {
+    content: "";
+    display: block;
+    width: 10%;
+    height: 3px;
+    background: white;
+    margin: 12px auto;
+}
+
+#intro-btn {
+    position: absolute;
+    /* top: 120%; */
+    /* left: 36%; */
+    /* margin: 15% auto 0; */
+    font-size: 2rem;
+    margin: 15% 34%;
+    width: 33%;
+    text-align: center;
+    padding: 20px 40px;
+}
+
+#intro-btn:hover {
+    width: 35%;
+}
+
+.jogo-inicial {
+    height: 100vh;
+    padding: 5% 0;
+    background-color: #6E28BF;
+}
+
+.jogo-inicial h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+}
+
+#ajuda-btn {
+    position: relative;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 8px 30px;
+    color: #09090E;
+    font-size: 0.875rem;
+    line-height: 20px;
+    font-weight: 800;
+    transition: 500ms;
+    margin: auto 45%;
+}
+
+#ajuda-btn:hover {
+    background-color: #000;
+    color: white;
+    padding: 8px 33px;
+}
+
+.jogo-tela {
+    background-color: white;
+    width: 100%;
+    height: 75vh;
+    margin: 3% auto;
+    border-radius: 15px;
+    /*box-shadow: 2px 2px 2px black;*/
+}
+
+.jogo-tela h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    text-align: left;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding-left: 2%;
+}
+
+#tela-inicial h3{
+    text-align: center;
+}
+
+.jogo-logo-inicial {
+    margin: auto auto;
+}
+
+#pronto-btn {
+    position: absolute;
+    /* top: 120%; */
+    /* left: 36%; */
+    /* margin: 15% auto 0; */
+    font-size: 2rem;
+    margin: 3% 34%;
+    width: 33%;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: #6E28BF;
+    color: white;
+}
+
+#pronto-btn:hover {
+    width: 35%;
+    color: black;
+}
+
+.jogo-tela p {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 25%;
+    font-weight: 600;
+    color: black;
+}
+
+/* ESTILO PERGUNTA QUIZ */
+
+.barra-lateral-quiz {
+    position: absolute;
+    width: 16%;
+    height: 75vh;
+    padding: 1% 0;
+    text-align: center;
+    background-color: #484B4D;
+    opacity: 85%;
+    border-left: 2px black solid;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    border-radius: 10px 0 0 10px;
+}
+
+.barra-lateral-quiz ul li {
+    margin: 15% 0;
+    background: red;
+    padding: 15% 0;
+    color: black;
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 2px #000 solid;
+    border-left: none;
+    /*border-right: none;*/
+    border-radius: 5px;
+}
+
+#premio-1 {
+    background-color: #00FF2B;
+}
+
+#premio-2 {
+    background-color: #CDFF00;
+}
+
+#premio-3 {
+    background-color: #FFDD00;
+}
+
+#premio-4 {
+    background-color: #FFC400;
+}
+
+#premio-5 {
+    background-color: #FF9100;
+}
+
+#premio-6 {
+    background-color: #FF3D00;
+}
+
+#premio-7 {
+    background-color: #FF0000;
+    color: white;
+}
+
+#barra-info {
+    width: 16%;
+    right: 0;
+    border-right: 2px black solid;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    border-radius: 0 10px 10px 0;
+}
+
+#barra-info li {
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    border: 2px #000 solid;
+    border-left: none;
+    border-right: none;
+    border-radius: 10px;
+
+}
+
+#barra-info ul li p, #barra-info ul li h4 {
+    font-weight: 800;
+}
+
+#dificuldade-item {
+    background-color: #3AFF00;
+}
+
+#atual-item {
+    background-color: #FFDD00;
+}
+
+#derrota-item {
+    background-color: #FF0000;
+}
+
+#proximo-item {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+#desistir-item {
+    background-color: #FF3D00;
+    cursor: pointer;
+}
+
+#desistir-item:hover {
+    background-color: #f00;
+    border-color: white;
+}
+
+.perguntas {
+    padding-top: 5%;
+    width: 68%;
+    height: 75vh;
+    margin: 0 auto;
+}
+
+#pergunta {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.lista-alternativas {
+    margin: 15% auto;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.lista-alternativas .alternativa {
+    background-color: #817BE6;
+    padding: 3%;
+    width: 33%;
+    border-radius: 15px;
+    text-align: left;
+    color: black;
+    font-weight: 600;
+    font-size: 1.15rem;
+    border: 1px #000 solid;
+    margin: 2%;
+    cursor: pointer;
+}
+
+.lista-alternativas td:hover {
+    background-color: #6E28BF;
+    color: white;
+
+}
+
+.lista-alternativas tr {
+    margin: 2% 0;
+}
+
+#resultado {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 5% 0;
+}
+
+.perguntas .btn {
+    background-color: #6E28BF;
+    color: #fff;
+    font-weight: 800;
+    padding: 10px 40px;
+    cursor: pointer;
+    margin: 0 auto 0 28%;
+}
+
+.perguntas .btn:hover {
+    background-color: #00FF2B;
+    color: black;
+    padding: 15px 50px;
+}
+
+
+/* ESTILOS PARA INTERAGIR COM JS */
+.inativo {
+    display: none;
+}
+
+.ativo {
+    display: block;
+}
+
+.selecionada {
+    background-color: #00FF2B;
+    padding: 3%;
+    width: 33%;
+    border-radius: 15px;
+    text-align: left;
+    color: black;
+    font-weight: 600;
+    font-size: 1.15rem;
+    border: 1px #000 solid;
+    margin: 2%;
+    cursor: pointer;
+}
+
+.selecionada:hover {
+    background-color: #3AFF00;
+}
