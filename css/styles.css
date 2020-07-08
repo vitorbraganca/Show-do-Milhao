@@ -624,6 +624,15 @@ img {
     background-color: #3AFF00;
 }
 
+#dificuldade-media {
+    background-color: #8f47ad;
+}
+
+#dificuldade-dificil {
+    background-color: #6706a5;
+}
+
+
 #premio-selecionado {
     background-color: #ff00d8;
     color: black;

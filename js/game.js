@@ -1,14 +1,14 @@
 let informacoes = [
     {
         numero: 1,
-        dificuldade: 'Facil',
+        dificuldade: 'Fácil',
         premioAtual: 'R$1.000,00',
         premioDerrota: 'R$0,00',
         premioProx: 'R$5.000,00',
     },
     {
         numero: 2,
-        dificuldade: 'Facil',
+        dificuldade: 'Fácil',
         premioAtual: 'R$5.000,00',
         premioDerrota: 'R$1.000,00',
         premioProx: 'R$10.000,00',
@@ -102,6 +102,7 @@ const telaFinal = document.getElementById("tela-final");
 // Mostradores de informacao
 let infoNumeroPergunta = document.getElementById('pergunta-numero');
 let dificuldade = document.getElementById("dificuldade");
+let dificuldadeItem = document.getElementById("dificuldade-item");
 let premioAtual = document.getElementById("premio-atual");
 let premioDerrota = document.getElementById("premio-derrota");
 let premioProx = document.getElementById("premio-proximo");
@@ -292,6 +293,8 @@ function insereInfo(numeroPergunta) {
 
     infoNumeroPergunta.innerText = 'Pergunta ' + informacoes[numeroPergunta-1].numero + ':';
     dificuldade.innerText = informacoes[numeroPergunta-1].dificuldade;
+    if (informacoes[numeroPergunta-1].dificuldade === 'Média') dificuldadeItem.setAttribute("id", "dificuldade-media");
+    else if (informacoes[numeroPergunta-1].dificuldade === 'Difícil') dificuldadeItem.setAttribute("id", "dificuldade-dificil");
     premioAtual.innerText = informacoes[numeroPergunta-1].premioAtual;
     premioDerrota.innerText = informacoes[numeroPergunta-1].premioDerrota;
     premioProx.innerText = informacoes[numeroPergunta-1].premioProx;
