@@ -105,7 +105,7 @@
         <a id="ajuda-btn" href="./ajuda.html" class="btn">Ajuda?</a>
 
         <div class="jogo-tela" id="tela-inicial">
-            <img class="jogo-logo-inicial" src="./img/logo-jogo.svg" alt="Logo">
+            <img class="jogo-logo" src="./img/logo-jogo.svg" alt="Logo">
             <h3>Bem vindo ao Show do Milhão da Família Aguiar</h3>
 
             <p>Está pronto?</p>
@@ -158,24 +158,24 @@
 
             <div class="perguntas" id="perguntas">
 
-                <h3 id="pergunta-numero">Pergunta 1:</h3>
+                <h3 id="pergunta-numero">Pergunta X:</h3>
 
-                <h4 id="pergunta">Qual é a capital do Brasil?</h4>
+                <h4 id="pergunta">Pergunta</h4>
 
                 <table class="lista-alternativas" id="alternativas">
                     <tr>
-                        <td class="alternativa" id="0">A) Rio de Janeiro</td>
-                        <td class="alternativa" id="1">C) São Paulo</td>
+                        <td class="alternativa" id="0">A) Alternativa </td>
+                        <td class="alternativa" id="1">C) Alternativa </td>
                     </tr>
                     <tr>
-                        <td class="alternativa"  id="2">B) Bahia</td>
-                        <td class="alternativa"  id="3">D) Brasília</td>
+                        <td class="alternativa"  id="2">B) Alternativa </td>
+                        <td class="alternativa"  id="3">D) Alternativa </td>
                     </tr>
                 </table>
 
                 <h4 id="resultado" class="inativo">Você acertou!</h4>
 
-                <input type="submit" id="btn-verifica" class="btn" value="Estou certo disso" onclick="verifica()">
+                <input type="submit" id="btn-verifica" class="btn" value="Estou certo disso">
 
             </div>
 
@@ -183,11 +183,16 @@
         </div>
 
         <div class="jogo-tela inativo" id="tela-final">
-            <img class="jogo-logo-inicial" src="./img/logo-jogo.svg" alt="Logo">
-            <h3>O jogo acabou agora!</h3>
+            <img class="jogo-logo" src="./img/logo-jogo.svg" alt="Logo">
+            <h3>O jogo acabou!</h3>
 
-<!--            <p>Está pronto?</p>-->
-            <a id="novamente-btn" href="#" class="btn">Jogue agora!</a>
+            <h4 id="resultado-perguntas">Você conseguiu responder X de 6 perguntas certas e faturou...</h4>
+
+            <h5 id="resultado-premio">R$X.000,00 reais!</h5>
+
+            <h4>Sinta-se livre para jogar quantas vezes quiser!</h4>
+
+            <a id="novamente-btn" href="#" class="btn">Jogar novamente!</a>
 
         </div>
 
