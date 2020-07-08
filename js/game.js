@@ -52,7 +52,7 @@ let perguntas = [
             2: 'B) Brasília',
             3: 'D) Bahia',
         },
-        repetida: 'sim',
+        repetida: '',
         resposta: 2,
 
     },
@@ -108,6 +108,19 @@ let premioProx = document.getElementById("premio-proximo");
 let resultado = document.getElementById("resultado");
 let enunciado = document.getElementById("pergunta");
 
+// Mostradores de prêmio
+let premios = [
+    document.getElementById("premio-1"),
+    document.getElementById("premio-2"),
+    document.getElementById("premio-3"),
+    document.getElementById("premio-4"),
+    document.getElementById("premio-5"),
+    document.getElementById("premio-6")
+]
+let resultadoPerguntas = document.getElementById("resultado-perguntas");
+let resultadoPremio = document.getElementById("resultado-premio");
+
+
 // Alternativas
 
 let alternativas = document.getElementsByClassName("alternativa");
@@ -118,6 +131,7 @@ let alternativaSelecionada = "";
 
 btnInicio.addEventListener( "click", ev => {
     ev.preventDefault();
+    console.log('Iniciando');
     telaInicial.classList.add('inativo');
     telaQuiz.classList.add('ativo');
 
@@ -180,6 +194,13 @@ function geraPergunta() {
 
 
     let indice = verificaRepeticao();
+    if (indice === 999) {
+        enunciado.innerText = 'Acho que acabaram minhas perguntas... Recarregue a página!'
+        for (let i = 0; i < alternativas.length; i++) {
+            alternativas[i].classList.add('inativo');
+        }
+    }
+
 
 
     enunciado.innerText = perguntas[indice].pergunta;
@@ -211,32 +232,26 @@ function geraPergunta() {
     }
 
     return respostaAtual = perguntas[indice].resposta;
-    // if (numeroPergunta === 2) {
-    //     dificuldade.innerText = 'Fácil';
-    //     premioAtual.innerText = 'R$5.000,00'
-    //     premioDerrota.innerText = 'R$1.000,00'
-    //     premioProx.innerText = 'R$25.000,00'
-    // }
+}
+
+function randomiza(range) {
+    let indice;
+    return indice = Math.floor(Math.random() * range);
 }
 
 function verificaRepeticao() {
-    do {
-        let indice = Math.floor(Math.random() * 2);
+    let tentativas = 0;
+    while (true) {
+        let indice = randomiza(perguntas.length);
+        tentativas += 1;
         if (perguntas[indice].repetida === '') {
+            // Setando pergunta como repetida
             perguntas[indice].repetida = 'sim';
-            console.log('Não é repetida')
-            console.log(indice)
             return indice
-        } else if (perguntas[indice].repetida === 'sim') {
-            // alert('Repetida!');
-            console.log('Repetida, caralho!');
-            console.log('indice repetido: ' + indice);
-            return indice;
-        }
-    } while (true)
-
-
+        } else if (tentativas > 15) return indice = 999;
+    }
 }
+
 
 function finalizar() {
     // alert('O jogo acabou! :)')
@@ -245,6 +260,14 @@ function finalizar() {
     telaQuiz.classList.remove('ativo');
     telaQuiz.classList.add('inativo');
     telaFinal.classList.add('ativo');
+    alert(numeroPergunta-1);
+
+    resultadoPerguntas.innerText = `Você conseguiu responder ${numeroPergunta-1} de 6 perguntas e faturou...`;
+    if (numeroPergunta-1 === 0) resultadoPremio.innerText = `R$0,00 reais! Que pena :(`;
+    else if (numeroPergunta >= 6) resultadoPremio.innerText = `R$1.000.000,00 de reais! Parabéns!`;
+
+    resultadoPremio.innerText = `${informacoes[numeroPergunta-1].premioDerrota} reais!`;
+
 }
 
 function alterarEstilo() {
@@ -272,6 +295,8 @@ function insereInfo(numeroPergunta) {
     premioAtual.innerText = informacoes[numeroPergunta-1].premioAtual;
     premioDerrota.innerText = informacoes[numeroPergunta-1].premioDerrota;
     premioProx.innerText = informacoes[numeroPergunta-1].premioProx;
+    console.log('premio selecionado: ' + premios[numeroPergunta-1])
+    premios[numeroPergunta-1].setAttribute("id","premio-selecionado");
 }
 
 iniciar();
