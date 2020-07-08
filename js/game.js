@@ -41,7 +41,7 @@ let informacoes = [
     },
     {
         numero: 6,
-        dificuldade: 'Difícil;',
+        dificuldade: 'Difícil',
         premioAtual: 'R$1.000.000,00',
         premioDerrota: 'R$0,00',
         premioProx: 'VITÓRIA',
@@ -50,7 +50,7 @@ let informacoes = [
 /* Array de objetos para as perguntas, contendo:
 *  o enunciado, as opcoes, a dificuldade e a resposta correta.
 */
-// LEMBRAR DE ENCONTRAR UMA FORMA ESCONDER ISSO DO CLIENTE (modulos parece uma boa opção)
+// LEMBRAR DE ENCONTRAR UMA FORMA ESCONDER ISSO DO USUARIO
 let perguntas = [
     {
         pergunta: 'Qual a capital do Brasil?',
@@ -65,7 +65,6 @@ let perguntas = [
     },
 
     {
-        // TROCAR ESSA PERGUNTA -> ESTÁ ERRADA!
         pergunta: 'Qual a capital do Peru?',
         opcoes: {
             0: 'A) Santiago',
@@ -75,6 +74,90 @@ let perguntas = [
         },
         repetida: '',
         resposta: 1,
+    },
+
+    {
+        pergunta: 'Qual o maior animal terrestre?',
+        opcoes: {
+            0: 'A) Baleia azul',
+            1: 'C) Elefante africano',
+            2: 'B) Girafa',
+            3: 'D) Dinossauro',
+        },
+        repetida: '',
+        resposta: 1,
+    },
+
+    {
+        pergunta: 'Quem foi o primeiro homem a pisar na Lua?',
+        opcoes: {
+            0: 'A) Yuri Gagarin',
+            1: 'C) Neil Armstrong',
+            2: 'B) Charles Duke',
+            3: 'D) Buzz Aldrin',
+        },
+        repetida: '',
+        resposta: 1,
+    },
+
+    {
+        pergunta: 'Quem pintou o teto da capela sistina?',
+        opcoes: {
+            0: 'A) Sandro Botticelli',
+            1: 'C) Donatello',
+            2: 'B) Michelangelo',
+            3: 'D) Leonardo da Vinci',
+        },
+        repetida: '',
+        resposta: 2,
+    },
+
+    {
+        pergunta: 'Em que ano acabou a Segunda Guerra Mundial?',
+        opcoes: {
+            0: 'A) 1918',
+            1: 'C) 1917',
+            2: 'B) 1943',
+            3: 'D) 1945',
+        },
+        repetida: '',
+        resposta: 3,
+    },
+
+    {
+        pergunta: 'Em que ano acabou a Primeira Guerra Mundial?',
+        opcoes: {
+            0: 'A) 1918',
+            1: 'C) 1917',
+            2: 'B) 1943',
+            3: 'D) 1945',
+        },
+        repetida: '',
+        resposta: 0,
+    },
+
+    {
+        pergunta: 'Em que país fica a Esfinge?',
+        opcoes: {
+            0: 'A) França',
+            1: 'C) Emirados Árabes',
+            2: 'B) Egito',
+            3: 'D) Dubai',
+        },
+        repetida: '',
+        resposta: 2,
+    },
+
+    {
+        pergunta: 'Qual o conceito que a Terceira Lei de Newton defende?',
+        opcoes: {
+            0: 'A) Energia',
+            1: 'C) Gravidade',
+            2: 'B) Inércia',
+            3: 'D) Ação e Reação',
+        },
+        repetida: '',
+        resposta: 3,
     },
 
     {
@@ -129,13 +212,10 @@ let resultadoPremio = document.getElementById("resultado-premio");
 
 let alternativas = document.getElementsByClassName("alternativa");
 
-// console.log(alternativas);
-
 let alternativaSelecionada = "";
 
 btnInicio.addEventListener( "click", ev => {
     ev.preventDefault();
-    // console.log('Iniciando');
 
     // COLOCAR NUMA FUNÇÃO
     telaInicial.classList.add('inativo');
@@ -151,7 +231,6 @@ function iniciar() {
     numeroPergunta = 1;
     insereInfo(numeroPergunta);
     const respostaAtual = geraPergunta();
-    console.log('Nova resposta atual :' + respostaAtual);
 }
 
 // Função usada para randomizar um indice para ser usado na seleção de pergunta
@@ -177,6 +256,7 @@ function verificaRepeticao() {
 function geraPergunta() {
     insereInfo(numeroPergunta);
     let indice = verificaRepeticao();
+
     if (indice === 999) {
         enunciado.innerText = 'Acho que acabaram minhas perguntas... Recarregue a página!'
         for (let i = 0; i < alternativas.length; i++) {
@@ -184,15 +264,12 @@ function geraPergunta() {
         }
     }
 
-
-
     enunciado.innerText = perguntas[indice].pergunta;
     for (let i = 0; i < alternativas.length; i++) {
         alternativas[i].innerHTML = perguntas[indice].opcoes[i];
     }
 
     for (let i = 0; i < alternativas.length; i++) {
-        console.log(alternativas[i].id);
         alternativas[i].addEventListener("click", evt => {
             // Se alternativa estiver vazia
             if (alternativaSelecionada === evt.target) return
@@ -204,12 +281,10 @@ function geraPergunta() {
 
             alternativaSelecionada = evt.target;
 
-            console.log('Alternativa: ' + evt.target);
             // Alterando atual
             alterarEstilo();
 
             Number(alternativaSelecionada);
-            console.log(alternativaSelecionada);
 
         });
     }
@@ -224,13 +299,17 @@ function insereInfo(numeroPergunta) {
 
     infoNumeroPergunta.innerText = 'Pergunta ' + informacoes[numeroPergunta-1].numero + ':';
     dificuldade.innerText = informacoes[numeroPergunta-1].dificuldade;
-    if (informacoes[numeroPergunta-1].dificuldade === 'Média') dificuldadeItem.setAttribute("id", "dificuldade-media");
-    else if (informacoes[numeroPergunta-1].dificuldade === 'Difícil') dificuldadeItem.setAttribute("id", "dificuldade-dificil");
+    if (informacoes[numeroPergunta-1].dificuldade === 'Média') {
+        dificuldadeItem.setAttribute("id", "dificuldade-media");
+        dificuldade.setAttribute("id", "dificuldade-media");
+    }
+    else if (informacoes[numeroPergunta-1].dificuldade === 'Difícil'){
+        dificuldadeItem.setAttribute("id", "dificuldade-dificil");
+        dificuldade.setAttribute("id", "dificuldade-dificil")
+    }
     premioAtual.innerText = informacoes[numeroPergunta-1].premioAtual;
     premioDerrota.innerText = informacoes[numeroPergunta-1].premioDerrota;
     premioProx.innerText = informacoes[numeroPergunta-1].premioProx;
-    console.log('premio selecionado: ' + premios[numeroPergunta-1])
-    premios[numeroPergunta-1].setAttribute("id","premio-selecionado");
 }
 
 // Função usada para comparar a resposta do usuário com a resposta da pergunta.
@@ -248,7 +327,6 @@ async function verifica() {
         geraPergunta();
 
     } else if (opcao !== respostaAtual && alternativaSelecionada !== "") {
-        console.log('errou');
         resultado.classList.remove('inativo');
         resultado.innerText = 'Que pena! Você errou!';
         resultado.classList.add('ativo');
@@ -263,7 +341,6 @@ async function verifica() {
 }
 
 function alterarEstilo() {
-    console.log('limpando ' + alternativaSelecionada.id)
     alternativaSelecionada.classList.toggle('alternativa');
     alternativaSelecionada.classList.toggle('selecionada');
 }
@@ -277,7 +354,6 @@ function finalizar() {
     telaQuiz.classList.remove('ativo');
     telaQuiz.classList.add('inativo');
     telaFinal.classList.add('ativo');
-    alert(numeroPergunta-1);
     resultadoPerguntas.innerText = `Você conseguiu responder ${numeroPergunta-1} de 6 perguntas e faturou...`;
     if (numeroPergunta-1 === 0) resultadoPremio.innerText = `R$0,00 reais! Que pena :(`;
     else if (numeroPergunta >= 6) resultadoPremio.innerText = `R$1.000.000,00 de reais! Parabéns!`;

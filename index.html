@@ -62,14 +62,14 @@
             <nav class="header_menu">
                 <ul class="grid-16">
                     <li><a href="#jogo-inicial">Jogar</a></li>
-                    <li><a href="./ajuda.html">Ajuda</a></li>
+                    <li><a href="./#">Ajuda</a></li>
                 </ul>
             </nav>
 
             <ul class="header_redes grid-1">
-                <li><a href="#"><img src="./img/icone-github.svg" alt="GitHub"></a></li>
-                <li><a href="#"><img src="./img/icone-linkedin.svg" alt="LinkedIn"></a></li>
-                <li><a href="#"><img src="./img/icone-vitor.svg" alt="Vitor Braganca"></a></li>
+                <li><a href="https://bit.ly/2AG80CI" target="_blank"><img src="./img/icone-github.svg" alt="GitHub"></a></li>
+                <li><a href="https://bit.ly/2YEC0qC" target="_blank"><img src="./img/icone-linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a href="https://bit.ly/2UPbZDS" target="_blank"><img src="./img/icone-vitor.svg" alt="Vitor Braganca"></a></li>
             </ul>
 
         </div>
@@ -102,9 +102,9 @@
 
     <div class="container">
 
-        <a id="ajuda-btn" href="./ajuda.html" class="btn">Ajuda?</a>
+        <a id="ajuda-btn" href="./#" class="btn">Ajuda?</a>
 
-        <div class="jogo-tela" id="tela-inicial">
+        <div class="jogo-tela inativo" id="tela-inicial">
             <img class="jogo-logo" src="./img/logo-jogo.svg" alt="Logo">
             <h3>Bem vindo ao Show do Milhão da Família Aguiar</h3>
 
@@ -113,48 +113,35 @@
 
         </div>
 
-        <div class="jogo-tela inativo" id="tela-quiz">
+        <div class="jogo-tela ativo" id="tela-quiz">
 
-            <div class="barra-lateral-quiz">
-                <ul class="lista-pontos">
-                    <li id="premio-7">R$1.000.000,00</li>
-                    <li id="premio-6">R$500.000,00</li>
-                    <li id="premio-5">R$100.000,00</li>
-                    <li id="premio-4">R$50.000,00</li>
-                    <li id="premio-3">R$25.000,00</li>
-                    <li id="premio-2">R$5.000,00</li>
-                    <li id="premio-1">R$1.000,00</li>
-                </ul>
-            </div>
+            <ul class="lista-info">
+                <li id="dificuldade-item">
+                    <h4>Dificuldade: </h4>
+                    <p id="dificuldade">Fácil</p>
+                </li>
 
-            <div class="barra-lateral-quiz" id="barra-info">
-                <ul class="lista-info">
-                    <li id="dificuldade-item">
-                        <h4>Dificuldade: </h4>
-                        <p id="dificuldade">Fácil</p>
-                    </li>
+                <li id="atual-item">
+                    <h4>Prêmio atual</h4>
+                    <p id="premio-atual">R$0,00</p>
+                </li>
 
-                    <li id="atual-item">
-                       <h4>Prêmio atual</h4>
-                        <p id="premio-atual">R$0,00</p>
-                    </li>
+                <li id="derrota-item">
+                    <h4>Se perder...</h4>
+                    <p id="premio-derrota">R$0,00</p>
+                </li>
 
-                    <li id="derrota-item">
-                        <h4>Se perder...</h4>
-                        <p id="premio-derrota">R$0,00</p>
-                    </li>
+                <li id="proximo-item">
+                    <h4>Próximo</h4>
+                    <p id="premio-proximo">R$0,00</p>
+                </li>
 
-                    <li id="proximo-item">
-                        <h4>Próximo</h4>
-                        <p id="premio-proximo">R$0,00</p>
-                    </li>
-                    
-                    <li id="desistir-item">
-                        <h4 id="desistir">DESISTIR</h4>
-                    </li>
+                <li id="desistir">
+                    <h4>Você pode</h4>
+                    <p>DESISTIR</p>
+                </li>
 
-                </ul>
-            </div>
+            </ul>
 
             <div class="perguntas" id="perguntas">
 
@@ -176,7 +163,6 @@
                 <h4 id="resultado" class="inativo">Você acertou!</h4>
 
                 <input type="submit" id="btn-verifica" class="btn" value="Estou certo disso">
-
             </div>
 
 
@@ -200,7 +186,6 @@
 
 </section>
 <!-- Jogo Section End -->
-
 
 <!-- Footer Section -->
 <footer>
@@ -247,7 +232,7 @@
                     <ul>
                         <!--                             MUDAR CAMINHO PARA PAGINAS DEFINITIVAS-->
                         <li><a href="#jogo-inicial">Jogar</a></li>
-                        <li><a href="./ajuda.html">Ajuda</a></li>
+                        <li><a href="#">Ajuda</a></li>
                     </ul>
                 </nav>
             </div>

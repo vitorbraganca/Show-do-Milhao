@@ -41,7 +41,8 @@ img {
 
 
 .header {
-    height: 20vh;
+    min-height: 20vh;
+    max-height: 30vh;
     position: relative;
     top: 0;
     width: 100%;
@@ -54,7 +55,7 @@ img {
 .header_logo {
     transform: translateX(-50%);
     left: 50%;
-    position: absolute;
+    position: relative;
 }
 
 .header img {
@@ -417,15 +418,60 @@ img {
 }
 
 #tela-final .btn {
-    background-color: red;
+    position: relative;
+    background-color: #6E28BF;
+    border-radius: 30px;
+    padding: 20px 30px;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 20px;
+    font-weight: 800;
+    transition: 500ms;
+}
+
+#tela-final .btn:hover {
+    background-color: #2F4FD8;
+    color: black;
+    padding: 25px 40px;
 }
 
 /* ESTILO PERGUNTA QUIZ */
 
+.lista-info {
+    width: 100%;
+    padding: 1%;
+    background-color: #817BE6;
+    border-radius: 10px 10px 0 0;
+}
+
+.lista-info li {
+    display: inline-block;
+    width: 20%;
+    height: 10%;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.lista-info li h4 {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.lista-info li p {
+    font-size: 1.3rem;
+}
+
+#desistir {
+    width: 17%;
+    height: 120%;
+}
+
 .barra-lateral-quiz {
-    position: absolute;
-    width: 16%;
+    position: relative;
+    width: 100%;
+    min-height: 75%;
     height: 75vh;
+    max-height: 75vh;
     padding: 1% 0;
     text-align: center;
     background-color: #484B4D;
@@ -434,11 +480,12 @@ img {
     border-top: 2px black solid;
     border-bottom: 2px black solid;
     border-radius: 10px 0 0 10px;
+    margin: 0;
 }
 
 .barra-lateral-quiz ul li {
     background: red;
-    padding: 15% 0;
+    padding: 10%;
     color: white;
     font-weight: 700;
     font-size: 1.125rem;
@@ -447,7 +494,7 @@ img {
     /*border-right: none;*/
     border-radius: 5px;
     width: 90%;
-    margin: 15% auto;
+    margin: 3% auto;
 }
 
 #premio-1 {
@@ -486,6 +533,7 @@ img {
     border-top: 2px black solid;
     border-bottom: 2px black solid;
     border-radius: 0 10px 10px 0;
+    margin: auto 0;
 }
 
 #barra-info li {
@@ -494,6 +542,7 @@ img {
     text-align: center;
     border: 2px #000 solid;
     border-radius: 10px;
+    padding: 5% 0;
 }
 
 #barra-info p {
@@ -514,6 +563,12 @@ img {
 
 #derrota-item {
     background-color: #FF0000;
+    color: white;
+}
+
+#premio-derrota {
+    font-weight: 700;
+    color: white;
 }
 
 #proximo-item {
@@ -521,12 +576,12 @@ img {
     color: black;
 }
 
-#desistir-item {
+#desistir {
     background-color: #FF3D00;
     cursor: pointer;
 }
 
-#desistir-item:hover {
+#desistir:hover {
     background-color: #f00;
     border-color: white;
 }
@@ -545,7 +600,7 @@ img {
 }
 
 .lista-alternativas {
-    margin: 15% auto;
+    margin: 10% auto;
     border-collapse: separate;
     border-spacing: 10px;
 }
@@ -582,6 +637,7 @@ img {
 }
 
 .perguntas .btn {
+    position: relative;
     background-color: #6E28BF;
     color: #fff;
     font-weight: 800;
@@ -626,12 +682,13 @@ img {
 
 #dificuldade-media {
     background-color: #8f47ad;
+    color: white;
 }
 
 #dificuldade-dificil {
     background-color: #6706a5;
+    color: white;
 }
-
 
 #premio-selecionado {
     background-color: #ff00d8;
