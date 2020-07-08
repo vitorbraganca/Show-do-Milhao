@@ -342,7 +342,7 @@ img {
     height: 75vh;
     margin: 3% auto;
     border-radius: 15px;
-    /*box-shadow: 2px 2px 2px black;*/
+    box-shadow: 2px 2px 2px black;
 }
 
 .jogo-tela h3 {
@@ -359,7 +359,7 @@ img {
     text-align: center;
 }
 
-.jogo-logo-inicial {
+.jogo-logo {
     margin: auto auto;
 }
 
@@ -390,6 +390,36 @@ img {
     color: black;
 }
 
+#tela-final {
+    text-align: center;
+}
+
+#tela-final h3 {
+    text-align: center;
+}
+
+#tela-final h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8%;
+}
+
+#tela-final h5 {
+    text-align: center;
+    margin: 3% auto 10% auto;
+    font-size: 1.7rem;
+    font-weight: 800;
+    background-color: #00FF2B;
+    padding: 2%;
+    border-radius: 15px;
+    box-shadow: #000 2px 2px 2px;
+    width: 50%;
+}
+
+#tela-final .btn {
+    background-color: red;
+}
+
 /* ESTILO PERGUNTA QUIZ */
 
 .barra-lateral-quiz {
@@ -407,46 +437,46 @@ img {
 }
 
 .barra-lateral-quiz ul li {
-    margin: 15% 0;
     background: red;
     padding: 15% 0;
-    color: black;
+    color: white;
     font-weight: 700;
     font-size: 1.125rem;
     text-align: center;
     border: 2px #000 solid;
-    border-left: none;
     /*border-right: none;*/
     border-radius: 5px;
+    width: 90%;
+    margin: 15% auto;
 }
 
 #premio-1 {
-    background-color: #00FF2B;
+    background-color: #bb7dc0;
 }
 
 #premio-2 {
-    background-color: #CDFF00;
+    background-color: #bb7dc0;
 }
 
 #premio-3 {
-    background-color: #FFDD00;
+    background-color: #8f47ad;
 }
 
 #premio-4 {
-    background-color: #FFC400;
+    background-color: #6e28ac;
 }
 
 #premio-5 {
-    background-color: #FF9100;
+    background-color: #6e28ac;
 }
 
 #premio-6 {
-    background-color: #FF3D00;
+    background-color: #6706a5;
 }
 
 #premio-7 {
-    background-color: #FF0000;
-    color: white;
+    background-color: #58018c;
+    font-size: 1rem;
 }
 
 #barra-info {
@@ -463,10 +493,11 @@ img {
     color: black;
     text-align: center;
     border: 2px #000 solid;
-    border-left: none;
-    border-right: none;
     border-radius: 10px;
+}
 
+#barra-info p {
+    font-size: 1.25rem;
 }
 
 #barra-info ul li p, #barra-info ul li h4 {
@@ -591,4 +622,11 @@ img {
 
 .selecionada:hover {
     background-color: #3AFF00;
+}
+
+#premio-selecionado {
+    background-color: #ff00d8;
+    color: black;
+    font-weight: 800;
+    border: 5px black solid;
 }
