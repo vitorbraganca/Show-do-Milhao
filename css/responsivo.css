@@ -1,0 +1,152 @@
+
+/* ESTILO PARA TABLETS */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+    /* ESTILO HEADER */
+    .header_redes li {
+        width: 150%;
+    }
+
+    #intro-btn {
+        margin: 15% 28%;
+        width: 45%;
+    }
+
+    /* ESTILOS GERAIS */
+
+    .lista-info li h4 {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 787px) {
+    /* Header*/
+    .header {
+        min-height: 30vh;
+        max-height: 40vh;
+    }
+    .header_logo {
+        left: 0;
+    }
+
+    #header_vitor {
+        display: none;
+    }
+
+    .grid-1 {
+        width: 100%;
+    }
+
+    .header_redes li {
+        display: inline-block;
+        margin: 35% auto 35% 3%;
+    }
+
+    .header_menu {
+        margin: 25% auto;
+    }
+
+    .header_menu ul li {
+        padding-left: 10%;
+    }
+
+    /* Introducao */
+    #intro-subtitulo:after, #intro-subtitulo:before {
+        width: 25%;
+    }
+
+    #intro-btn {
+        width: 100%;
+        left: 0;
+        margin: 10% auto;
+    }
+
+    /* Tela Jogo*/
+    #ajuda-btn {
+        margin: 0 auto;
+        left: 40%;
+        padding-bottom: 5%;
+    }
+
+    #pronto-btn {
+        width: 100%;
+        margin: 5% auto;
+    }
+
+    #ajuda-btn {
+        left: 35%;
+    }
+
+    .jogo-inicial .container {
+        width: 100%;
+    }
+
+    .lista-info li {
+        width: 49%;
+        margin-top: 1%;
+    }
+
+    .lista-info li p {
+        margin-top: 3%;
+    }
+
+    #desistir {
+        width: 100%;
+        margin-top: 1%;
+        text-align: center;
+    }
+
+    #desistir p {
+        margin-top: 5%;
+    }
+
+    .jogo-tela {
+        width: 100%;
+        margin-top: 10%;
+        min-height: 90vh;
+        max-height: 100vh;
+    }
+
+    .perguntas {
+        width: 100%;
+        padding: 0 1%;
+    }
+
+    .perguntas .btn {
+        margin: 0;
+        width: 100%;
+    }
+
+    /* FOOTER */
+    .footer {
+        min-height: 65vh;
+        max-height: 110vh;
+        text-align: center;
+    }
+    .footer_historia {
+        text-align: center;
+        padding: 0;
+        margin: 5% auto;
+    }
+    .footer_contato {
+        margin: 5% auto;
+    }
+    .footer_redes {
+        margin: 5% auto;
+    }
+    .footer h3:after {
+        margin: 6px auto 12px auto;
+    }
+    .copy {
+        text-align: center;
+    }
+    .footer_menu {
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+
