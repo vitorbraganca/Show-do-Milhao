@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="./css/grid.css">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="./css/responsivo.css">
+    <link rel="stylesheet" type="text/css" href="./css/modal.css">
 
 
     <!-- Fontes -->
@@ -53,7 +54,7 @@
             </a>
 
             <div id="header_vitor">
-                <a href="https://vitorbraganca.com" target="_blank">
+                <a href="https://bit.ly/2UPbZDS" target="_blank">
                     <img src="./img/vitor-elipse.png" alt="Vitor Braganca">
                 </a>
                 <p>Por Vítor</p>
@@ -63,7 +64,6 @@
             <nav class="header_menu">
                 <ul class="grid-16">
                     <li><a href="#jogo-inicial">Jogar</a></li>
-                    <li><a href="./#">Ajuda</a></li>
                 </ul>
             </nav>
 
@@ -103,7 +103,7 @@
 
     <div class="container">
 
-        <a id="ajuda-btn" href="./#" class="btn">Ajuda?</a>
+        <a id="ajuda-btn" data-modal="abrir" href="#" class="btn">Ajuda?</a>
 
         <div class="jogo-tela" id="tela-inicial">
             <img class="jogo-logo" src="./img/logo-jogo.svg" alt="Logo">
@@ -188,6 +188,47 @@
 </section>
 <!-- Jogo Section End -->
 
+<section class="modal-container" data-modal="container" id="modal">
+    <div class="modal">
+        <button data-modal="fechar" class="fechar" id="fechar">X</button>
+        <h2 class="subtitulo-modal">Sobre o jogo</h2>
+        <div class="modal-texto">
+            <h3>Jogar o Show do Milhão é bem fácil, acompanhe e veja com seus próprios olhos!</h3>
+        </div>
+
+        <div class="comecando grid-8">
+            <h2 class="subtitulo">Começando</h2>
+            <h3>Para começar, basta clicar ou tocar em JOGAR</h3>
+            <p>Lembrando que este jogo não tem nenhuma intenção de ser, de alguma forma, lucrativo.</p>
+            <p>Para jogar você só vai precisar de concentração, atenção e sorte em alguns casos!</p>
+            <p>Selecione a alternativa correta e clique em <strong>ESTOU CERTO DISSO</strong> para confirmar!</p>
+
+            <h2 class="subtitulo" id="premiacao">Premiação</h2>
+            <h3>Os prêmios são puramente fictícios!</h3>
+            <p>Todos os valores que você "ganhar" ao jogar é 100% fictício, você não terá direito ao prêmio em
+                dinheiro ou bens materiais.</p>
+
+        </div>
+
+        <div class="regras grid-7">
+            <h2 class="subtitulo">Regras</h2>
+            <h3>Nosso jogo tem só algumas regrinhas básicas</h3>
+            <ul class="regras-lista">
+                <li>- O jogo funciona da seguinte forma: Você responderá as perguntas ganhando uma certa quantidade de
+                    reais baseada na quantidade de acertos.</li>
+                <li><strong>1:</strong> Se você acertar a pergunta, você passa para a próxima.</li>
+                <li><strong>2:</strong> Caso você erre, você terá sempre o valor que ganhou na última pergunta.</li>
+                <li><strong>3:</strong> Exceto na Pergunta do Milhão, onde é a pergunta Arrisca Tudo!, isto é, se
+                    acertar, ganha <strong>UM MILHÃO DE REAIS</strong>, se errar, sai somente com alcool em gel nas
+                    mãos!</li>
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+
+
 <!-- Footer Section -->
 <footer>
     <div class="footer">
@@ -233,7 +274,6 @@
                     <ul>
                         <!--                             MUDAR CAMINHO PARA PAGINAS DEFINITIVAS-->
                         <li><a href="#jogo-inicial">Jogar</a></li>
-                        <li><a href="#">Ajuda</a></li>
                     </ul>
                 </nav>
             </div>
@@ -244,5 +284,7 @@
 <!-- Footer Section End -->
 
 <script src="./js/game.js"></script>
+<script src="./js/main.js"></script>
+
 
 </body>

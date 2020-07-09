@@ -389,6 +389,7 @@ let perguntas = [
 const btnInicio = document.getElementById("pronto-btn");
 const btnDesistir = document.getElementById("desistir");
 const btnVerifica = document.getElementById("btn-verifica");
+const btnNovamente = document.getElementById("novamente-btn");
 
 // Telas
 const telaInicial = document.getElementById("tela-inicial");
@@ -426,6 +427,8 @@ btnInicio.addEventListener( "click", ev => {
 btnDesistir.addEventListener("click", finalizar);
 
 btnVerifica.addEventListener("click", verifica);
+
+btnNovamente.addEventListener("click", recarrega);
 
 // Função usada para iniciar o jogo.
 function iniciar() {
@@ -573,4 +576,9 @@ function limpar() {
     resultado.classList.remove('ativo');
     resultado.classList.add('inativo');
 }
+
+function recarrega() {
+    document.location.reload(true);
+}
+
 iniciar();
