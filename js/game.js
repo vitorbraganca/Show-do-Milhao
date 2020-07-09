@@ -169,7 +169,7 @@ let perguntas = [
     },
 
     {
-        pergunta: 'O sapo é da classo dos:',
+        pergunta: 'O sapo é da classe dos:',
         opcoes: {
             0: 'A) Herbívoros',
             1: 'C) Anfíbios',
