@@ -414,6 +414,7 @@ let resultadoPremio = document.getElementById("resultado-premio");
 // Alternativas
 let alternativas = document.getElementsByClassName("alternativa");
 
+let numeroPergunta, respostaAtual;
 let alternativaSelecionada = "";
 
 btnInicio.addEventListener( "click", ev => {
