@@ -6,6 +6,8 @@
 
 Este projeto não tem nenhuma intenção de tornar-se lucrativo de alguma forma. Tem como intenção apenas ser concluído para a etapa do Processo Seletivo Jovens Gênios. 
 Desenvolvido por Vítor Bragança utilizando HTML, CSS e Javascript puro.
+
+
 ![](http://showmilhao.vitorbraganca.com/img/logo-jogo.svg)
 
 
