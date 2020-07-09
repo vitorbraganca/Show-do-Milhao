@@ -1,5 +1,8 @@
 /* ESTILOS GERAIS */
 
+* {
+    box-sizing: border-box
+}
 
 body {
     font-family: Montserrat, serif;
@@ -16,6 +19,21 @@ img {
     max-width: 100%;
 }
 
+.subtitulo {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2% 0;
+}
+
+.subtitulo:after, .subtitulo:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #6E28BF;
+    margin: 6px auto 12px auto;
+}
 
 .btn {
     position: relative;
@@ -306,7 +324,9 @@ img {
 }
 
 .jogo-inicial {
-    height: 100vh;
+    min-height: 110vh;
+    height: 100%;
+    max-height: 100%;
     padding: 5% 0;
     background-color: #6E28BF;
 }
@@ -340,7 +360,9 @@ img {
 .jogo-tela {
     background-color: white;
     width: 100%;
-    height: 75vh;
+    min-height: 100%;
+    height: 90vh;
+    max-height: 100%;
     margin: 3% auto;
     border-radius: 15px;
     box-shadow: 2px 2px 2px black;
