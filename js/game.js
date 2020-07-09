@@ -504,19 +504,22 @@ function insereInfo(numeroPergunta) {
     // Limpa alternativa selecionada
     if (alternativaSelecionada) limpar();
 
-    infoNumeroPergunta.innerText = 'Pergunta ' + informacoes[numeroPergunta-1].numero + ':';
-    dificuldade.innerText = informacoes[numeroPergunta-1].dificuldade;
-    if (informacoes[numeroPergunta-1].dificuldade === 'Média') {
-        dificuldadeItem.setAttribute("id", "dificuldade-media");
-        dificuldade.setAttribute("id", "dificuldade-media");
-    }
-    else if (informacoes[numeroPergunta-1].dificuldade === 'Difícil'){
-        dificuldadeItem.setAttribute("id", "dificuldade-dificil");
-        dificuldade.setAttribute("id", "dificuldade-dificil")
-    }
-    premioAtual.innerText = informacoes[numeroPergunta-1].premioAtual;
-    premioDerrota.innerText = informacoes[numeroPergunta-1].premioDerrota;
-    premioProx.innerText = informacoes[numeroPergunta-1].premioProx;
+
+    if (numeroPergunta <= informacoes.length) {
+        infoNumeroPergunta.innerText = 'Pergunta ' + informacoes[numeroPergunta-1].numero + ':';
+        dificuldade.innerText = informacoes[numeroPergunta-1].dificuldade;
+        if (informacoes[numeroPergunta-1].dificuldade === 'Média') {
+            dificuldadeItem.setAttribute("id", "dificuldade-media");
+            dificuldade.setAttribute("id", "dificuldade-media");
+        }
+        else if (informacoes[numeroPergunta-1].dificuldade === 'Difícil'){
+            dificuldadeItem.setAttribute("id", "dificuldade-dificil");
+            dificuldade.setAttribute("id", "dificuldade-dificil")
+        }
+        premioAtual.innerText = informacoes[numeroPergunta-1].premioAtual;
+        premioDerrota.innerText = informacoes[numeroPergunta-1].premioDerrota;
+        premioProx.innerText = informacoes[numeroPergunta-1].premioProx;
+    } else finalizar();
 }
 
 // Função usada para comparar a resposta do usuário com a resposta da pergunta.
@@ -577,6 +580,7 @@ function limpar() {
     resultado.classList.add('inativo');
 }
 
+// Função usada para recarregar a página
 function recarrega() {
     document.location.reload(true);
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "pergunta": "Qual a capital do Brasil?",
+    "opcoes": {
+      "0": "A) Rio de Janeiro",
+      "1": "C) São Paulo",
+      "2": "B) Brasília",
+      "3": "D) Bahia",
+    },
+
+    "resposta": 2
+
+  },
+  {
+    "pergunta": "Qual a capital do Chile?",
+    "0": "A) Santiago",
+    "1": "C) Aruba",
+    "2": "B) San Chile",
+    "3": "D) Montevideu",
+    "resposta": 1
+  }
+]
