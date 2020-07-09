@@ -21,7 +21,7 @@ Para jogar é simples, basta clicar em **JOGAR AGORA**, as perguntas e alternati
 Selecione a alternativa correta e clique em **ESTOU CERTO DISSO** para confirmar!
 
 ### Há um vídeo tutorial no YouTube que pode ser acessado no link a seguir!
-[Tutorial Youtube](https://www.youtube.com/)
+[Tutorial Youtube](https://youtu.be/lHeNClfnZ1M)
 
 ## Onde posso jogar
 __Está disponível no meu website, otimizado para dispositivos móveis e desktop!__
